@@ -1,0 +1,13 @@
+<div *ngIf="agencies">
+  <h1>{{agencies.title}}</h1>
+  <p>{{agencies.description}}</p>
+</div>
+
+<li *ngFor="let post of agencies">
+  <a routerLink="#">
+    <h2>{{post.title}}</h2>
+  </a>
+  <span>
+      {{post.published_date}} &bull; {{post.author.name}}
+    </span>
+</li>
